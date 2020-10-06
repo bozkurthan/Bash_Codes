@@ -1,0 +1,6 @@
+Rename all
+
+for i in $(seq 1 21); do convert -resize 25% photo$i.jpg resized_photo$i.jpg; done
+
+
+for i in $(seq 1 16); do ffmpeg -i video$i.mp4 -vf scale="720:480" resized_video$i.mp4; done
